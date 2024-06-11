@@ -1,140 +1,142 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-  <base target="_top">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>登録用コピペのやつ</title>
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <title>日古用登録システム</title>
+  <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
-  <h1>EC登録用コピペのやーつ</h1>
+  <div class="container">
+    <h2 class="heading-41">管理番号表示</h2>
+    <div class="box-006">
+      <p>４桁で出力できるようになりました</p>
+  </div>
 
   
-  <h2>管理番号表示</h2>
-  <input type="text" id="currentNumber" placeholder="番号を入力">
-  <button id="nextButton">次の番号</button>
-  <p id="nextNumber"></p>
+    <input type="text" id="currentNumber" placeholder="番号を入力">
+    <button id="nextButton">次の番号</button>
+    <p id="nextNumber"></p>
 
-  <h2>本の状態選択</h2>
-  <select id="condition1">
-    <option value="天">天</option>
-    <option value="地">地</option>
-    <option value="背">背</option>
-    <option value="のど">のど</option>
-    <option value="小口">小口</option>
-    <option value="カバー">カバー</option>
-    <option value="スピン">スピン</option>
-    <option value="奥付、扉">奥付、扉</option>
-    <option value="函">函</option>
-    <option value="かど">かど</option>
-    <option value="見返し">見返し</option>
-    <option value="ひら">ひら</option>
-    <option value="そで">そで</option>
-    <option value="溝">溝</option>
-  </select>
-
-  <select id="condition2">
-    <option value="ヤケ">ヤケ</option>
-    <option value="シミ">シミ</option>
-    <option value="スレ">スレ</option>
+    <h2 class="heading-41">本の状態選択</h2>
+<p>選択するだけで出力されるようになりました</p>
+    <select id="condition1">
+      <option value="天">天</option>
+      <option value="地">地</option>
+      <option value="背">背</option>
+      <option value="のど">のど</option>
+      <option value="小口">小口</option>
+      <option value="カバー">カバー</option>
+      <option value="スピン">スピン</option>
+      <option value="奥付、扉">奥付、扉</option>
+      <option value="函">函</option>
+      <option value="かど">かど</option>
+      <option value="見返し">見返し</option>
+      <option value="ひら">ひら</option>
+      <option value="そで">そで</option>
+      <option value="溝">溝</option>
+    </select>
+  
+    <select id="condition2">
+      <option value="ヤケ">ヤケ</option>
+      <option value="微ヤケ">微ヤケ</option>
+      <option value="シミ">シミ</option>
+      <option value="スレ">スレ</option>
+      <option value="ヨレ">ヨレ</option>
+      <option value="目立たない程度のスレ">目立たない程度のスレ</option>
+      <option value="目立たない程度のシミ">目立たない程度のシミ</option>
+      <option value="折れ">折れ</option>
+      
+      <option value="三方ヤケ">三方ヤケ</option>
+      <option value="破れ">破れ</option>
+      <option value="ヘコミ">ヘコミ</option>
+      <option value="蔵書印">蔵書印</option>
+      <option value="サイン本">サイン本</option>
+      <option value="水濡れ跡">水濡れ跡</option>
+      <option value="汚れ">汚れ</option>
+      <option value="廃棄印、線">廃棄印、線</option>
+      <option value="ソリ（波打ち）">ソリ（波打ち）</option>
+      <option value="ハゲ">ハゲ</option>
+      <option value="読み跡">読み跡</option>
+      <option value="ツカレ">ツカレ</option>
+      <option value="古書店店舗ラベル">古書店店舗ラベル</option>
+    
+  　</select>
+  
+  <select id="condition3">
     <option value="目立たない程度のスレ">目立たない程度のスレ</option>
-    <option value="目立たない程度のシミ">目立たない程度のシミ</option>
-    <option value="折れ">折れ</option>
-    <option value="ツカレ">ツカレ</option>
-    <option value="傍線、記名、日付">傍線、記名、日付</option>
-    <option value="三方ヤケ">三方ヤケ</option>
-    <option value="破れ">破れ</option>
-    <option value="ヘコミ">ヘコミ</option>
-    <option value="蔵書印">蔵書印</option>
-    <option value="サイン本">サイン本</option>
-    <option value="水濡れ跡">水濡れ跡</option>
-    <option value="汚れ">汚れ</option>
-    <option value="廃棄印、線">廃棄印、線</option>
-    <option value="ソリ（波打ち）">ソリ（波打ち）</option>
-    <option value="ハゲ">ハゲ</option>
-    <option value="読み跡">読み跡</option>
-    <option value="古書店店舗ラベル">古書店店舗ラベル</option>
-  <!-- 他のセレクトボックスも同様に省略 -->
-　</select>
-
-<select id="condition3">
-    <option value="ヤケ">ヤケ</option>
-    <option value="折れ">折れ</option>
-    <option value="微スレ">微スレ</option>
-    <option value="ツカレ">ツカレ</option>
-    <option value="シミ">シミ</option>
-    <option value="スレ">スレ</option>
-    <option value="研磨跡">研磨跡</option>
-     <option value="目立たない程度のスレ">目立たない程度のスレ</option>
-    <option value="目立たない程度のシミ">目立たない程度のシミ</option>
-    <option value="破れ">破れ</option>
-    <option value="ヘコミ">ヘコミ</option>
-    <option value="蔵書印">蔵書印</option>
-    <option value="サイン本">サイン本</option>
-    <option value="水濡れ跡">水濡れ跡</option>
-    <option value="汚れ">汚れ</option>
-    <option value="廃棄印、線">廃棄印、線</option>
-    <option value="ソリ（波打ち）">ソリ（波打ち）</option>
-    <option value="ハゲ">ハゲ</option>
-    <option value="傍線、記名、日付">傍線、記名、日付</option>
-    <option value="読み跡">読み跡</option>
-    <option value="古書店店舗ラベル">古書店店舗ラベル</option>
-   
-  </select>
-
-
-
-  <br><br>
-  <button onclick="copyCondition()">本の状態をコピー</button>
-  <br><br>
-  <textarea id="conditionResult" rows="4" cols="50"></textarea>
-
-  <h2>保管場所選択</h2>
-  <select id="location">
-    <option value="日本文学">日本文学</option>
-    <option value="海外文学">海外文学</option>
-    <option value="哲学">哲学</option>
-    <option value="文庫">文庫</option>
-    <option value="新書">新書</option>
-    <option value="ＴＶ">ＴＶ</option>
-    <option value="芸能">芸能</option>
-    <option value="アイドル">アイドル</option>
-    <option value="音楽">音楽</option>
-    <option value="歴史">歴史</option>
-    <option value="民族">民族</option>
-    <option value="文化史">文化史</option>
-    <option value="現代思想">現代思想</option>
-    <option value="政治経済">政治経済</option>
-    <option value="岩波文庫">岩波文庫</option>
-    <option value="美術">美術</option>
-    <option value="ファッション">ファッション</option>
-    <option value="全集">全集</option>
-    <option value="絵本">絵本</option>
-    <option value="アート写真集">アート写真集</option>
-    <option value="辞書">辞書</option>
-    <option value="紀行">紀行</option>
-    <option value="歌舞伎">歌舞伎</option>
-    <option value="伝統芸能">伝統芸能</option>
-    <option value="エッセイ">エッセイ</option>
-    <option value="ゲーム">ゲーム</option>
-    <option value="演劇">演劇</option>
-    <option value="映画">映画</option>
-    <option value="アメコミ">アメコミ</option>
-    <option value="アニメ">アニメ</option>
-    <option value="特撮">特撮</option>
-    <!-- 他のオプションは省略 -->
-  </select>
-  <!-- 他のセレクトボックスも同様に省略 -->
-
-  <br><br>
-  <button onclick="copyLocation()">保管場所をコピー</button>
-  <br><br>
-  <textarea id="locationResult" rows="4" cols="50"></textarea>
-
+      <option value="ヤケ">ヤケ</option>
+      <option value="折れ">折れ</option>
+      <option value="微スレ">微スレ</option>
+      <option value="ツカレ">ツカレ</option>
+      <option value="シミ">シミ</option>
+      <option value="スレ">スレ</option>
+      <option value="研磨跡">研磨跡</option>
+       
+      <option value="目立たない程度のシミ">目立たない程度のシミ</option>
+      <option value="破れ">破れ</option>
+      <option value="ヘコミ">ヘコミ</option>
+      <option value="蔵書印">蔵書印</option>
+      <option value="サイン本">サイン本</option>
+      <option value="水濡れ跡">水濡れ跡</option>
+      <option value="汚れ">汚れ</option>
+      <option value="廃棄印、線">廃棄印、線</option>
+      <option value="ソリ（波打ち）">ソリ（波打ち）</option>
+      <option value="ハゲ">ハゲ</option>
+      <option value="傍線、記名、日付">傍線、記名、日付</option>
+      <option value="読み跡">読み跡</option>
+      <option value="古書店店舗ラベル">古書店店舗ラベル</option>
+     
+    </select>
   
+  
+  
+    <br><br>
+    <button onclick="copyCondition()">本の状態をコピー</button>
+    <br><br>
+    <textarea id="conditionResult" rows="4" cols="50"></textarea>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+<h2 class="heading-41">保管場所選択</h2>
+    <select id="location01">
+      <option value="アイドル">アイドル</option>
+      <option value="音楽">音楽</option>
+      <option value="歴史">歴史</option>
+      <option value="民族">民族</option>
+      <option value="文化史">文化史</option>
+      <option value="現代思想">現代思想</option>
+      <option value="政治経済">政治経済</option>
+      <option value="岩波文庫">岩波文庫</option>
+      <option value="美術">美術</option>
+      <option value="ファッション">ファッション</option>
+      <option value="全集">全集</option>
+      <option value="絵本">絵本</option>
+      <option value="アート写真集">アート写真集</option>
+      <option value="辞書">辞書</option>
+      <option value="紀行">紀行</option>
+      <option value="エッセイ">エッセイ</option>
+      <option value="ゲーム">ゲーム</option>
+      <option value="演劇">演劇</option>
+      <option value="映画">映画</option>
+      <option value="アメコミ">アメコミ</option>
+      <option value="アニメ">アニメ</option>
+      <option value="特撮">特撮</option>
+      <option value="ホラー">ホラー</option>
+    </select>
+    <button id="copyLocationButton01">保管場所をコピー</button>
+    <input type="text" id="locationResult01" readonly>
+  
+  <h2 class="heading-41">保管場所入力</h2>
+  <p>哲学→「JG 哲学」と出力されます</p>
+    
+    <input type="text" id="location" placeholder="保管場所を入力">
+    
+    <button id="copyLocationButton">保管場所をコピー</button>
+    <input type="text" id="locationResult" readonly>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
