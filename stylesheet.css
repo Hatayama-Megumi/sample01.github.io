@@ -9,13 +9,13 @@ body {
   width: 80%;
   max-width: 600px;
   margin: 50px auto;
-  padding: 20px;
+  padding: 10px;
   background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 input[type="text"], select {
@@ -30,19 +30,19 @@ button {
   padding: 10px 20px;
   margin-bottom: 10px;
   border: none;
-  background-color: #2589d0;
+  background-color: #009966;
   color: white;
   border-radius: 4px;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #009966;
 }
 
 p {
-  margin-top: 10px;
-  font-weight: bold;
+  margin-top: 5px;
+  
 }
 
 .heading-41 {
@@ -55,11 +55,27 @@ p {
 
 .heading-41::before {
   display: inline-block;
-  width: 5px;
-  height: 1.5em;
+  width: 4px;
+  height: 1em;
   margin-right: .5em;
-  background-color: #2589d0;
+  background-color: #009966;
   content: '';
 }
 
+/* Styling for each paragraph */
+p[data-copy] {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
 
+/* Optional: Add some spacing around the entire block */
+.container {
+  padding: 20px;
+  
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
