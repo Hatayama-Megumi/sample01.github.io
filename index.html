@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -10,7 +11,7 @@
   <div class="container">
     <h2 class="heading-41">管理番号表示</h2>
     <div class="box-006">
-      <p>４桁で出力できるようになりました</p>
+      <p>４桁で出力されます</p>
   </div>
 
   
@@ -19,7 +20,7 @@
     <p id="nextNumber"></p>
 
     <h2 class="heading-41">本の状態選択</h2>
-<p>選択するだけで出力されるようになりました</p>
+<p></p>
     <select id="condition1">
       <option value="天">天</option>
       <option value="地">地</option>
@@ -27,7 +28,7 @@
       <option value="のど">のど</option>
       <option value="小口">小口</option>
       <option value="カバー">カバー</option>
-      <option value="スピン">スピン</option>
+      
       <option value="奥付、扉">奥付、扉</option>
       <option value="函">函</option>
       <option value="かど">かど</option>
@@ -89,51 +90,73 @@
      
     </select>
   
-  
-  
-    <br><br>
-    <button onclick="copyCondition()">本の状態をコピー</button>
-    <br><br>
     <textarea id="conditionResult" rows="4" cols="50"></textarea>
 
 
 
-<h2 class="heading-41">保管場所選択</h2>
-    <select id="location01">
-      <option value="アイドル">アイドル</option>
-      <option value="音楽">音楽</option>
-      <option value="歴史">歴史</option>
-      <option value="民族">民族</option>
-      <option value="文化史">文化史</option>
-      <option value="現代思想">現代思想</option>
-      <option value="政治経済">政治経済</option>
-      <option value="岩波文庫">岩波文庫</option>
-      <option value="美術">美術</option>
-      <option value="ファッション">ファッション</option>
-      <option value="全集">全集</option>
-      <option value="絵本">絵本</option>
-      <option value="アート写真集">アート写真集</option>
-      <option value="辞書">辞書</option>
-      <option value="紀行">紀行</option>
-      <option value="エッセイ">エッセイ</option>
-      <option value="ゲーム">ゲーム</option>
-      <option value="演劇">演劇</option>
-      <option value="映画">映画</option>
-      <option value="アメコミ">アメコミ</option>
-      <option value="アニメ">アニメ</option>
-      <option value="特撮">特撮</option>
-      <option value="ホラー">ホラー</option>
-    </select>
-    <button id="copyLocationButton01">保管場所をコピー</button>
-    <input type="text" id="locationResult01" readonly>
+
+    
   
-  <h2 class="heading-41">保管場所入力</h2>
-  <p>哲学→「JG 哲学」と出力されます</p>
+    <h2 class="heading-41">定型文</h2>
+    <p>クリックすると自動でコピーされます</p>
+    <p data-copy>●店舗併売品につき、売り切れの際はご容赦ください</p>
+    <p data-copy>★A4サイズ・厚さ3cm以内・1kg以内ならクリックポスト（185円）で発送</p>
+      <p data-copy>●配送方法:1kg以上は福山通運490円〜（※地域・重量によって送料は変わります）</p>
+        <p data-copy>※商品の状態は出品時のものを基準としております</p>
+  
+        <p data-copy>【アメコミ】【邦訳コミック】</p>
+        <p data-copy>【アメコミ】【原書ペーパーバック】</p>
+        <p data-copy>【アメコミリーフ】</p>
+<h2 class="heading-41">保管場所選択</h2>
+<p>クリックするとJG＋保管場所が自動でコピーされます</p>
+<div>
+<button class="copyButton">日本文学</button>
+<button class="copyButton">海外文学</button>
+<button class="copyButton">文庫</button>
+<button class="copyButton">新書</button>
+<button class="copyButton">サブカル</button>
+<button class="copyButton">芸能</button>
+<button class="copyButton">アイドル</button>
+<button class="copyButton">音楽</button>
+<button class="copyButton">歴史</button>
+<button class="copyButton">民族</button>
+<button class="copyButton">文化史</button>
+<button class="copyButton">現代思想</button>
+<button class="copyButton">宗教</button>
+<button class="copyButton">哲学</button>
+<button class="copyButton">政治経済</button>
+<button class="copyButton">岩波人文系文庫</button>
+<button class="copyButton">全集</button>
+<button class="copyButton">絵本</button>
+<button class="copyButton">ファッション</button>
+<button class="copyButton">美術</button>
+<button class="copyButton">デザイン</button>
+<button class="copyButton">占い</button>
+<button class="copyButton">アート写真集</button>
+<button class="copyButton">紀行</button>
+<button class="copyButton">エッセイ</button>
+<button class="copyButton">食</button>
+<button class="copyButton">辞書</button>
+<button class="copyButton">江戸</button>
+<button class="copyButton">歌舞伎</button>
+<button class="copyButton">伝統芸能</button>
+<button class="copyButton">演劇</button>
+<button class="copyButton">ダンス</button>
+
+<button class="copyButton">特撮</button>
+<button class="copyButton">ゲーム</button>
+<button class="copyButton">映画</button>
+
+<button class="copyButton">マーベル</button>
+<button class="copyButton">DC</button>
+<button class="copyButton">アメコミその他</button>
+
+<input type="text" id="location" placeholder="🐢">
+<!-- A feedback element to show copy result (optional) -->
+<input type="text" id="locationResult" readonly>
+
+</div>
     
-    <input type="text" id="location" placeholder="保管場所を入力">
-    
-    <button id="copyLocationButton">保管場所をコピー</button>
-    <input type="text" id="locationResult" readonly>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
